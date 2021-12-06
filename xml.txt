@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mobilesys SYSTEM "mobilesys.dtd">
+<mobilesys>
+<test>
+<parameter name="textMsg" datatype="string"/>
+<parameter name="phoneNo" datatype="string"/>
+<classes>
+<class name=parameter.>
+</test>
+</mobilesys>
+
+
+HttpRequest req = new HttpRequest();
+HttpResponse res = new HttpResponse();
+Http http = new Http();
+string requestURL='https://api-csc-stg-sgw.ext.hpe.com';
+string endPointURL = 'https://xml-t2lan.itechtool.com/httpg/send';
+req.setEndpoint(endPointURL);
+req.setMethod('POST');
+req.setBody(apiPayload);
+ 
+req.setHeader('mx-client-id','HP_Genesis:1:124');
+req.setHeader('mx-client-pw','rHcUDh.q');
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<username>mx-client-id</username>
+<password>mx-client-pw</password>
+</root>
+
+
+        try {
+            System.debug('start callout');
+            res = http.send(req);
+            System.debug('end callout');
+        } catch(System.CalloutException e) {
+            System.debug('Callout error: '+ e);
+            System.debug(res.toString());
+        }

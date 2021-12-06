@@ -1,0 +1,28 @@
+
+user login credentials
+l.devarapalli@brave-panda-2yvz2l.com
+
+sales force day1
+https://trailhead.salesforce.com/en/content/learn/modules/data_modeling/objects_intro?trail_id=force_com_admin_beginner&trailmix_creator_id=auser797&trailmix_slug=implementing-field-service-lightning-pre-work
+https://trailhead.salesforce.com/en/content/learn/modules/starting_force_com?trail_id=force_com_admin_beginner&trailmix_creator_id=auser797&trailmix_slug=implementing-field-service-lightning-pre-work
+fields(min,max)
+min>max(validation)
+position (closedate=createddate+30)
+https://trailhead.salesforce.com/en/content/learn/modules/point_click_business_logic
+https://trailhead.salesforce.com/en/content/learn/modules/advanced_formulas
+[12:43 PM] G, Pradeep
+Formula fields, roll up summary
+Tracking Configuration modifications
+
+[12:43 PM] G, Pradeep
+Record typesSecurity Model - Profiles and Permission sets
+Sharing Model - OWD, Role hierarchy, Sharing rules, Manual Sharing
+Message by G, Pradeep
+
+G, Pradeep12:44 PM
+https://trailhead.salesforce.com/en/content/learn/modules/data_security
+https://trailhead.salesforce.com/en/content/learn/modules/data_modeling
+https://trailhead.salesforce.com/en/content/learn/projects/customize-a-salesforce-object
+https://trailhead.salesforce.com/en/content/learn/projects/create-a-process-for-managing-support-cases
+https://trailhead.salesforce.com/en/content/learn/superbadges/superbadge_process_automation
+

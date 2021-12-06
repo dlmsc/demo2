@@ -1,0 +1,97 @@
+@istest
+public class GSDCSCNonstopProblemSolHelperTest {
+
+    
+    @istest public static void singleUnit(){
+        
+       DLVR_Problem_Description_Solution__c prblmDesc = new DLVR_Problem_Description_Solution__c();
+        insert prblmDesc;
+        
+      DLVR_Workaround__c workaround = new DLVR_Workaround__c();
+        workaround.Problem_Description_Solution_ID__c=prblmDesc.Id;
+        insert workaround;
+        
+        
+      // workaround.Resolution__c='Sample Resolution';
+       workaround.Status__c=GSDCSCNonstopConstants.InvalidStatus;
+       update workaround;
+        
+     /*  
+        DLVR_NonStopBusinessData__c dlvrdata=new DLVR_NonStopBusinessData__c();
+        dlvrdata.Category__c='Weekdays';
+        insert dlvrdata;
+        
+        DLVR_NonStopBusinessData__c dlvrre=new DLVR_NonStopBusinessData__c();
+        dlvrre.Release_ID__c='releaseid';
+        insert dlvrre;
+        
+        DLVR_NonStopBusinessData__c dlvrtype=new DLVR_NonStopBusinessData__c();
+        dlvrtype.Type__c='SPR';
+        insert dlvrtype;
+        
+        DLVR_NonStopBusinessData__c dlvrname=new DLVR_NonStopBusinessData__c();
+        dlvrname.Name='lakshmi';
+        insert dlvrname;
+        Knowledge__kav issue = new Knowledge__kav();
+        issue.Title='Test Article 5657';
+        issue.GSD_KM_Issue_Solution_Environment__c='Software';
+        issue.Language='en_US';
+        issue.UrlName=prblmDesc.name;
+        issue.ValidationStatus='Approved';
+        issue.IsVisibleInPkb=false;
+        issue.IsVisibleInCsp=true;
+        issue.IsVisibleInPrm =false;
+         issue.GSD_KM_Issue_Solution_Product_Group__c = 'Enterprise Software';
+        issue.GSD_KM_Issue_Solution_Product_Queue__c  = 'IP Telephony Software';  
+        issue.GSD_KM_Issue_Solution_Disclosure_Level__c = 'Public';
+        issue.GSD_KM_Issue_Solution_Issue__c = 'test';
+        //issue.RecordTypeId = recordTypeId;
+        //issue.IsVisibleInApp=true; 
+        insert issue; 
+      
+        
+       /* Knowledge__kav instOfKav=new Knowledge__Kav();
+       instOfKav.GSD_KM_Issue_Solution_Product_Group__c=instOfKav.urlName;
+        insert instOfKav;
+        prblmDesc.KnowledgeArticle_Id__c=GSDCSCNonStopUtility;
+        insert prblmDesc;
+         Knowledge__Kav knowledgeMap = new Knowledge__Kav(); 
+         knowledgeMap.get(instofProblem.Name) !=null;
+         insert knowledgeMap; */
+        
+
+List<DLVRKMArticlePublish__e> articlePublishEvent = new List<DLVRKMArticlePublish__e>();
+        DLVRKMArticlePublish__e ar=new DLVRKMArticlePublish__e();
+        ar.Article_Number__c='number';
+        ar.Article_Id__c= '234'; 
+        articlePublishEvent.add(ar);
+        insert articlePublishEvent;
+
+set<string> urlnameSet = new set<string>();
+         
+        List<DLVR_Problem_Description_Solution__c> dlvrList = new List<DLVR_Problem_Description_Solution__c>();
+        dlvrList.add(prblmDesc);
+        urlnameSet.add(prblmDesc.Name);
+         
+       
+       /* List<DLVRKMArticlePublish__e> articlePublishEvent = new List<DLVRKMArticlePublish__e>();
+        DLVRKMArticlePublish__e ar=new DLVRKMArticlePublish__e();
+        ar.Article_Number__c='number';
+        ar.Article_Id__c= '234'; 
+        articlePublishEvent.add(ar);
+        insert articlePublishEvent;*/
+       GSDCSCNonstopProblemSolHelper.knowledgeArticleUtility(dlvrList,null,urlnameSet);
+       
+        
+       
+    }
+         
+
+
+
+
+
+
+
+
+ && (instofProblem.Dispatch__c==GSDCSCNonstopConstants.dispatchPDSYes)
